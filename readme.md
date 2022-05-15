@@ -12,11 +12,11 @@ For now, one demo example, for your feedback how to maybe present it in a better
 
 ```
 $role = Role::with('permissions')->first();
+
 $permissionsListToShow = $role->permissions
-    ->map(function ($permission) {
-        return $permission->display_name;
-    })
-    ->implode("<br>");
+    ->map
+    ->display_name
+    ->implode('<br>');
 ```
 
 **What is $role->permissions**:
@@ -65,9 +65,8 @@ $role = Role::with('permissions')->first();
 
 ```php
 $role->permissions
-    ->map(function ($permission) {
-        return $permission->display_name;
-    })
+    ->map
+    ->display_name
     ...
 ```
 
@@ -86,10 +85,9 @@ Illuminate\Support\Collection {#396 ▼
 
 ```php
 $role->permissions
-    ->map(function ($permission) {
-        return $permission->display_name;
-    })
-    ->implode("<br>");
+    ->map
+    ->display_name
+    ->implode('<br>');
 ```
 
 Result value:

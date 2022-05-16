@@ -1,4 +1,4 @@
-## Example 2: push + map + implode
+# Example 2: push + map + implode
 
 **Task**: array of Twitter usernames comes from the Artisan command option. We need to add some hardcoded items to that array, filter out the '@' symbol, and display all usernames as comma-separated string.
 
@@ -35,7 +35,7 @@ Expected result:
 Users excluded: someuser, otheruser, povilaskorop, dailylaravel
 ```
 
-### Steps explained
+## Steps explained
 
 **Step 0. Initial value.**
 
@@ -43,11 +43,13 @@ Users excluded: someuser, otheruser, povilaskorop, dailylaravel
 collect($this->option('exclude'));
 
 // The value:
-^ array:2 [
+array:2 [
   0 => "someuser"
   1 => "@otheruser"
 ]
 ```
+
+- - - - - 
 
 **Step 1. push()**
 
@@ -60,13 +62,15 @@ collect($this->option('exclude'))
 Result value:
 
 ```
-^ array:4 [
+array:4 [
   0 => "someuser"
   1 => "@otheruser"
   2 => "povilaskorop"
   3 => "@dailylaravel"
 ]
 ```
+
+- - - - - 
 
 **Step 2. map()**
 
@@ -80,13 +84,15 @@ collect($this->option('exclude'))
 Result value:
 
 ```
-^ array:4 [
+array:4 [
   0 => "someuser"
   1 => "otheruser"
   2 => "povilaskorop"
   3 => "dailylaravel"
 ]
 ```
+
+- - - - - 
 
 **Step 3. implode()**
 

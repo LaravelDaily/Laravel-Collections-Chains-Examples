@@ -1,4 +1,4 @@
-## Example 1: map + implode
+# Example 1: map + implode
 
 **Task**: within many-to-many relationship between `roles` and `permissions` DB tables (`permission_role`), we want to show the permissions of one specific role, already formatted with `<br>`, one permission per line.
 
@@ -25,7 +25,7 @@ class Role extends Model
 }
 ```
 
-### Steps explained
+## Steps explained
 
 **Step 0. Initial value.**
 
@@ -55,6 +55,8 @@ $role = Role::with('permissions')->first();
 ]
 ```
 
+- - - - - 
+
 **Step 1. map()**
 
 ```php
@@ -75,6 +77,8 @@ Illuminate\Support\Collection {#396 ▼
   ]
 }
 ```
+
+- - - - - 
 
 **Step 2. implode()**
 

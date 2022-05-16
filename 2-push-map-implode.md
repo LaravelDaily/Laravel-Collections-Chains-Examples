@@ -35,6 +35,8 @@ Expected result:
 Users excluded: someuser, otheruser, povilaskorop, dailylaravel
 ```
 
+- - - - - 
+
 ## Steps explained
 
 **Step 0. Initial value.**

@@ -115,4 +115,6 @@ Result value:
 
 [Back to All Examples](readme.md)
 
+[Next Example: filter + map + implode](3-filter-map-implode.md)
+
 [Previous Example: map + implode](1-map-implode.md)
